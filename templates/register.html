@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../static/img/logo.png">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/video.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/register.css' %}" rel="stylesheet" type="text/css">
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css">
+    <title>Register</title>
+</head>
+<body>
+    <section>
+        <div class="header">
+            <a class="logo" href="http://127.0.0.1:8000/" style="background-image: url(../static/img/logo.png);"></a>
+        </div>
+    </section>
+    <section class="box_center">
+        <div class="box_register">
+            <form class="form_register" method="POST">
+                {% csrf_token %}
+                <h1>REGISTER</h1>
+                {{ form.as_p }}
+                <div class="change_Register">
+                    <a class="btn link" href="http://127.0.0.1:8000/login">Login</a>
+                    <button type="submit" id="submit" class="btn link">Register</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

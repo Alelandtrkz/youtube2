@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../static/img/logo.png">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/video.css" rel="stylesheet" type="text/css">
+    <title>VIDEO</title>
+</head>
+<body>
+    <section>
+        <div class="header">
+            <a class="logo" href="http://127.0.0.1:8000/" style="background-image: url(../static/img/logo.png);"></a>
+            <form class="search">
+                <input name="query" class="search_text" type="text" placeholder="search" autocomplete="on">
+                <button class="button_search" style="background-image: url(../static/img/search.png);"></button>
+            </form>
+            {% if user.is_authenticated %}
+                 <a class="boton_enter link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a class="boton_enter link" href="http://127.0.0.1:8000/login">Login</a>
+            {% endif %}
+        </div>
+    </section>
+    <section>
+        <div class="video_container">
+            <div class="video_box">
+                <div class="play" style="width: 640px; height: 360px;">
+                    <video controls="" autoplay="" name="media" style=" width: 903px;height: 508px;">
+                        <source src="{{ vid1.video_3 }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="description_text">
+                    <div class="t_d">
+                        <p class="title_d">{{vid4.title}}</p>
+                        <p class="date">{{vid4.date}}</p>
+                    </div>
+                    
+                    <div class="like">
+                        <p class="username">{{vid4.user}}</p>
+                        <div class="buton_like">
+                        <p>{{ likes4.cantidad_likes  }}</p>
+                            <img class="like_photo" href="{% url 'dar_like' %}" src="https://static-00.iconduck.com/assets.00/like-icon-2048x1676-wjkvm94s.png">
+                            <img class="like_photo" href="{% url 'dar_like' %}" src="https://cdn-icons-png.freepik.com/512/2343/2343514.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="secundary">
+                <a class="content link" href="{{ video.video}}">
+                    <img  class="preview" src="{{ vid2.photo }}">
+                    <div class="text_box">
+                        <p class="title_p_v">{{ vid2.title }}</p>
+                        <div>
+                            <p class="author">{{ vid2.user }}</p>
+                            <p class="date">{{ vid2.date }}</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="content link" href="{{ video2.video}}">
+                    <img  class="preview" src="{{ vidt.photo }}">
+                    <div class="text_box">
+                        <p class="title_p_v">{{ vidt.title }}</p>
+                        <div>
+                            <p class="author">{{ vidt.user }}</p>
+                            <p class="date">{{ vidt.date }}</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="content link" href="{{ video3.video}}">
+                    <img  class="preview" src="{{ vid3.photo }}">
+                    <div class="text_box">
+                        <p class="title_p_v">{{ vid3.title }}</p>
+                        <div>
+                            <p class="author">{{ vid3.user }}</p>
+                            <p class="date">{{ vid3.date }}</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="content link" href="{{ video5.video}}">
+                    <img  class="preview" src="{{ vid5.photo }}">
+                    <div class="text_box">
+                        <p class="title_p_v">{{ vid5.title }}</p>
+                        <div>
+                            <p class="author">{{ vid5.user }}</p>
+                            <p class="date">{{ vid5.date }}</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="content link" href="{{ video6.video}}">
+                    <img  class="preview" src="{{ vid6.photo }}">
+                    <div class="text_box">
+                        <p class="title_p_v">{{ vid6.title }}</p>
+                        <div>
+                            <p class="author">{{ vid6.user }}</p>
+                            <p class="date">{{ vid6.date }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

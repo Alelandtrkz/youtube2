@@ -1,0 +1,139 @@
+.video_container{
+    display: flex;
+    justify-content: center;
+}
+.video_box{
+    margin-left: 20px;
+}
+.play{
+    width: 955px!important;
+    height: 530px!important;
+}
+video{
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.secundary{
+    display: flexbox;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    margin: 15px 0 0 35px;
+}
+.preview{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    object-fit: cover;
+    display: block;
+    width: 200px;
+    height: 120px;
+    border-radius: 15px;
+}
+.text_box{
+    margin-left: 15px;
+    width: 161px;
+}
+.description_text{
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+.title_d{
+    font-size: 25px;
+    color: #fff;
+}
+.like{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+.username{
+    font-size: 25px;
+    color: #0bb4e2;
+    margin-left: 0px;
+}
+.buton_like{
+    display: flex;
+    margin-left: auto;
+    margin-right: 39px;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 11px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.like_photo{
+    width: 20px;
+    height: 20px;
+}
+.title_p_v{
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
+}
+.t_d{
+    display: flex;
+    flex-direction: row;
+    gap: 430px;
+    justify-content: flex-start;
+}
+.text_comment{
+    width: 1018px;
+    max-height: 66px;
+    min-height: 66px;
+    outline: none;
+    border: 1px solid rgb(151 151 151);
+    background: none;
+    padding: 10px;
+    max-width: 882px;
+    min-width: 882px;
+    font-size: 20px;
+    border-radius: 11px;
+    color: #ffffff;
+    
+}
+.boton_send{
+    display: flex;
+    width: 115px;
+    height: 29px;
+    margin-left: 784px;
+    margin-top: 20px;
+    background: #9a22ff;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.coments{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: inline-grid;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    width: 899px;
+    line-height:1rem;
+    -webkit-line-clamp: 2
+
+}
+.comment_p{
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.title_comment{
+    font-size: 30px;
+    padding: 50px 0px 45px 0px;
+}

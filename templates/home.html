@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../static/img/logo.png">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <title>Boutufe</title>
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <a class="logo" href="http://127.0.0.1:8000" style="background-image: url(../static/img/logo.png);"></a>
+            <form class="search">
+                <input name="query" class="search_text" type="text" placeholder="search" autocomplete="on">
+                <button class="button_search" style="background-image: url(../static/img/search.png);"></button>
+            </form>
+                <a class="boton_enter link" href="http://127.0.0.1:8000/register">Register</a>
+                <a class="boton_enter link" href="http://127.0.0.1:8000/login">Login</a>
+        </div>
+    </section>
+    <section>
+        <div class="box">
+        <a class="container link" href="{{ video.video }}">
+            <img class="img_video" src="{{ video2.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video2.title }}</p>
+                <div>
+                    <p class="author">{{ video2.user }}</p>
+                    <p class="date">{{ video2.date }}</p>
+                </div>
+            </div>
+        </a>
+        <a class="container link" href="{{ video2.video }}">
+            <img class="img_video" src="{{ video.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video.title }}</p>
+                <div>
+                    <p class="author">{{ video.user }}</p>
+                    <p class="date">{{ video.date }}</p>
+                </div>
+            </div>
+        </a>
+        <a class="container link" href="{{ video3.video }}">
+            <img class="img_video" src="{{ video3.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video3.title }}</p>
+                <div>
+                    <p class="author">{{ video3.user }}</p>
+                    <p class="date">{{ video3.date }}</p>
+                </div>
+            </div>
+        </a>
+        
+        </div>
+    </section>
+    <section>
+        <div class="box">
+        <a class="container link" href="{{ video4.video }}" >
+            <img class="img_video" src="{{ video4.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video4.title }}</p>
+                <div>
+                    <p class="author">{{ video4.user }}</p>
+                    <p class="date">{{ video4.date }}</p>
+                </div>
+            </div>
+        </a>
+        <a class="container link" href="{{ video5.video }}">
+            <img class="img_video" src="{{ video5.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video5.title }}</p>
+                <div>
+                    <p class="author">{{ video5.user }}</p>
+                    <p class="date">{{ video5.date }}</p>
+                </div>
+            </div>
+        </a>
+        <a class="container link" href="{{ video6.video}}">
+            <img class="img_video" src="{{ video6.photo }}">
+            <div class="info">
+                <p class="title_p">{{ video6.title }}</p>
+                <div>
+                    <p class="author">{{ video6.user }}</p>
+                    <p class="date">{{ video6.date }}</p>
+                </div>
+            </div>
+        </a>
+        
+        </div>
+    </section>
+</body>
+</html>

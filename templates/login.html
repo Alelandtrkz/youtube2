@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/video.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <section>
+        <div class="header">
+            <a class="logo" href="http://127.0.0.1:8000" style="background-image: url(../static/img/logo.png);"></a>
+        </div>
+    </section>
+    <section class="box_center">
+        <div class="box_login">
+            <form class="form_login" method="post">
+                {% csrf_token %}
+            <h1>LOGIN</h1>
+                <input class="input_lo_re" name="username" placeholder="Email" type="username" required>
+                <input class="input_lo_re" name="password" placeholder="Password" type="password" required>
+                <div class="change">
+                    <button class="btn link">Sent</button>
+                    <a href="http://127.0.0.1:8000/register" class="btn link">Register</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
